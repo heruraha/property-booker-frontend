@@ -1,0 +1,55 @@
+{
+  "name": "trekker-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@datepicker-react/hooks": "^2.1.1",
+    "@react-google-maps/api": "^1.7.11",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "downshift": "^3.3.5",
+    "match-sorter": "^4.0.2",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "query-string": "^6.8.3",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-dropzone": "^10.1.10",
+    "react-feather": "^2.0.3",
+    "react-geocode": "^0.2.1",
+    "react-hooks-paginator": "^0.4.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-slick": "^0.25.2",
+    "react-spinners": "^0.6.1",
+    "react-super-responsive-table": "^5.1.1",
+    "react-tag-input": "^6.4.1",
+    "react-toggle": "^4.1.1"
+  },
+  "devDependencies": {
+    "react-dnd": "^5.0.0",
+    "react-dnd-html5-backend": "^3.0.2",
+    "env-cmd": "^10.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

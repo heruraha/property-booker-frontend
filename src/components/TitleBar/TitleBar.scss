@@ -1,0 +1,13 @@
+@import 'assets/scss/variables.scss';
+
+.title-bar {
+    margin-top: $header-height;
+    .title-bar-inner {
+        margin: 0 0 0 auto !important;
+        position: relative; 
+        z-index: 3;
+    }
+    @include md {
+
+    }
+}

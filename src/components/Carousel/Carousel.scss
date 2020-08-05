@@ -1,0 +1,30 @@
+@import 'assets/scss/variables.scss';
+
+.carousel {
+    //border-radius: 4px;
+    overflow: hidden;
+    .carousel-indicators {
+        bottom: -12px
+    }
+    @include sm {
+        overflow: visible;
+        .carousel-indicators {
+            bottom: -50px;
+            li { border-color: $green; border-radius: 100px; background-color: $green !important; }
+        }
+    }
+}
+.carousel-control-prev, .carousel-control-next {
+    opacity: 0 !important;
+    cursor: pointer !important;
+    &:hover {
+        opacity: 1 !important;
+    }
+    
+    & .prev-icon, & .next-icon {
+        display: inline-block;
+        background: no-repeat 50% / 100% 100%;
+        padding: 1rem 1.25rem;
+    }
+}
+

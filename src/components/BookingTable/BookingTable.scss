@@ -1,0 +1,80 @@
+@import 'assets/scss/variables.scss';
+
+.responsiveTable {
+  width: 100%;
+  tr {
+    border-bottom: 1px solid $gray-light;
+  }
+  td .tdBefore {
+    display: none;
+  }
+  td {
+    padding: 1rem 0;
+    }
+    thead th {
+        padding: 1rem 0;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 40em) {
+  /*
+    Force table elements to not behave like tables anymore
+    Hide table headers (but not display: none;, for accessibility)
+  */
+
+  .responsiveTable table,
+  .responsiveTable thead,
+  .responsiveTable tbody,
+  .responsiveTable th,
+  .responsiveTable td,
+  .responsiveTable tr {
+    display: block;
+  }
+
+  .responsiveTable thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    border-bottom: 2px solid #333;
+  }
+
+  .responsiveTable tbody tr {
+    transition: $trans;
+    border: 1px solid $gray-light;
+    padding: .5rem .25rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    &:hover {
+        background-color: $greenlight;
+        box-shadow: 0 2px $gray-light;
+    }
+  }
+
+  .responsiveTable td.pivoted {
+    /* Behave like a "row" */
+    border: none !important;
+    position: relative;
+    padding-left: calc(50% + 10px) !important;
+    text-align: left !important;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  .responsiveTable td .tdBefore {
+    /* Now like a table header */
+    position: absolute;
+    display: block;
+
+    /* Top/left values mimic padding */
+    left: 1rem;
+    width: calc(50% - 20px);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: left !important;
+    font-weight: 600;
+  }
+}

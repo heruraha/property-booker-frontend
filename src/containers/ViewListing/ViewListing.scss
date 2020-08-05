@@ -1,0 +1,22 @@
+@import 'assets/scss/variables.scss';
+
+#edit-listing-nav {
+    .btn-link {
+        color: $gray;
+        padding-left: 0;
+        &.active, &:hover {
+            color: $brand-primary;
+        }
+    }
+    @include md {
+        flex-direction: row !important;
+        overflow-x: scroll;
+        margin-bottom: 1rem;
+        .btn-link {
+            min-width: 100px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    }
+} 

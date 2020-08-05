@@ -1,0 +1,23 @@
+@import 'assets/scss/variables.scss';
+
+.card-img-wrap {
+    min-height: 230px;
+    .carousel-item {
+        overflow: hidden;
+        max-height: 230px;
+        .img {
+            width: 100%; width: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 230px;
+        }
+    }
+}
+
+.property-card {
+    transition: .3s all;
+    &:hover, &:focus{
+        background-color: $greenlight;
+        box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+    }
+}

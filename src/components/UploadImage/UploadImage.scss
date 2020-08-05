@@ -1,0 +1,77 @@
+@import 'assets/scss/variables.scss';
+
+.upload-button-wrap {
+  
+  .upload-button {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: $gray-light;
+    background-clip: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none !important;
+    padding: 4rem 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    word-wrap: break-word;
+    word-break: break-all;
+    transition: .3s all;
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    &.active-image {
+        padding: 0;
+        .default-img {
+            width: 100%;
+            height: auto;
+        }
+        .edit-btn {
+            position: absolute;
+            right: 0;
+            background: $brand-primary;
+            stroke: white;
+            width: 35px;
+            height: 35px;
+            padding: .5rem;
+        }
+    }
+    input:focus {
+      outline: none !important;
+    }
+    .card-body {
+      flex: 1 1 auto;
+      padding: 0;
+      pointer-events: none;
+      p { 
+        color: $gray; 
+        margin-bottom: 0;
+        &.file-info {
+          font-weight: bold;
+          margin-bottom: 0;
+        }
+        u {
+          color: $green;
+          letter-spacing: .03rem;
+          display:block;
+        }
+      }
+      svg {
+          height: 50px;
+          stroke: $green;
+          width: auto;
+          margin-bottom: 1rem;
+          transition: .3s all;
+          &.spin {
+            -webkit-animation:spin 4s linear infinite;
+            -moz-animation:spin 4s linear infinite;
+            animation:spin 4s linear infinite;
+          }
+      }
+    }
+  }
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

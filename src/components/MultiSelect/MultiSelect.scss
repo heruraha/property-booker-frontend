@@ -1,0 +1,113 @@
+@import 'assets/scss/variables.scss';
+
+.multi-select-wrap {
+
+    .select-wrap-inner {
+        position: relative;
+
+    }
+    .select-input {
+        width: 100%;
+        font-size: 1rem;
+        word-wrap: break-word;
+        line-height: 1em;
+        outline: 0;
+        white-space: normal;
+        display: inline-block;
+        border-radius: 0;
+        transition: box-shadow .1s ease,width .1s ease;
+        &:hover {
+          border-color: $gray;
+          box-shadow: none;
+        }
+        &:hover, &:focus {
+          border-color: $green;
+          box-shadow: 0 2px 3px 0 $gray;
+        }
+    }
+    .btn-controller {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 0px;
+        top: 8px;
+        cursor: pointer;
+        svg {
+            transition: .1s all;
+            stroke: $gray;
+        }
+    }
+    .select-wrap-inner.active {
+        .btn-controller {
+            svg {
+                transform: rotate(180deg)
+            }
+        }
+    }
+    .controller-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0 1.5rem;
+        min-height: 61px;
+        height: auto;
+    }
+    .selected-tag {
+        background-color: rgba($brand-primary, .72);
+        color: white;
+        border-radius: 2px;
+        padding: 2px 5px;
+        svg {
+            width: 14px;
+            height: auto;
+        }
+    }
+    .select-menu {
+        max-height: 150px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-top-width: 0;
+        outline: 0;
+        border-radius: 0;
+        transition: opacity .1s ease;
+        box-shadow: 0 2px 3px 0 $gray;
+        border-color: $gray;
+        border-right-width: 1.5px;
+        border-bottom-width: 1.5px;
+        border-left-width: 1.5px;
+        border-style: solid;
+        position: absolute;
+        background: white;
+        z-index: 1;
+    }
+    .select-item {
+        position: relative;
+        cursor: pointer;
+        display: block;
+        border: none;
+        height: auto;
+        text-align: left;
+        border-top: none;
+        line-height: 1em;
+        color: rgba(0,0,0,.87);
+        font-size: 1rem;
+        text-transform: none;
+        font-weight: 400;
+        box-shadow: none;
+        padding: .8rem 1.1rem;
+        white-space: normal;
+        word-wrap: normal;
+        &.active {
+            color: rgba(0,0,0,.95);
+            background: rgba(0,0,0,.03);            
+        }
+        &.selected {
+            color: rgba(0,0,0,.95);
+            font-weight: 700;
+        }
+    }
+
+}

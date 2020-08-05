@@ -1,0 +1,18 @@
+@import 'assets/scss/variables.scss';
+
+.separator {
+    border-top: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
+    padding: .5rem 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $gray;
+}
+
+label {
+    font-weight: 600;
+    color: $gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,41 @@
+@import 'assets/scss/variables.scss';
+
+.toasty {
+    background: $blue;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    padding: 1.25em;
+    position: absolute;
+    right: -365px;
+    bottom: 2em;
+    transition: 0.15s ease-in-out;
+    width: 325px;
+    z-index: 22;
+    border-top-left-radius: $border-radius-base;
+    border-bottom-left-radius: $border-radius-base;
+    &.on {
+        transform: translateX(-365px);
+    }
+    .close {
+        cursor: pointer;
+        float: right;
+        font-size: 1.25rem;
+        line-height: 1;
+        margin-left: 1em;
+        font-weight: lighter;
+        opacity: .8;
+    }
+    &.danger {
+        background: $red !important;
+    }
+    &.warning {
+        background: $yellow;
+    }
+    &.info {
+        background: $green;
+    }
+}
+
+
+

@@ -1,0 +1,20 @@
+@import 'assets/scss/variables.scss';
+
+
+
+.img-list {
+
+    .img-wrap {
+        position: relative;
+        .delete-btn {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            background: $red !important;
+            padding: 0.25rem 0.5rem;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}

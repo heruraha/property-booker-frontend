@@ -1,0 +1,64 @@
+@import 'assets/scss/variables.scss';
+
+.selected-tag {
+    background-color: rgba($brand-primary, .72);
+    color: white;
+    border-radius: 2px;
+    padding: 2px 5px;
+    svg {
+        width: 14px;
+        height: auto;
+    }
+}
+
+.tags-input-wrap {
+    .select-menu {
+        max-height: 150px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-top-width: 0;
+        outline: 0;
+        border-radius: 0;
+        transition: opacity .1s ease;
+        box-shadow: 0 2px 3px 0 $gray;
+        border-color: $gray;
+        border-right-width: 1.5px;
+        border-bottom-width: 1.5px;
+        border-left-width: 1.5px;
+        border-style: solid;
+        position: absolute;
+        background: white;
+        z-index: 1;
+        width: 75%;
+        margin: 0;
+        li {
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            display: block;
+            border: none;
+            height: auto;
+            text-align: left;
+            border-top: none;
+            line-height: 1em;
+            color: rgba(0,0,0,.87);
+            font-size: 1rem;
+            text-transform: none;
+            font-weight: 400;
+            box-shadow: none;
+            padding: .8rem 1.1rem;
+            margin: 0;
+            white-space: normal;
+            word-wrap: normal;
+            &.active {
+                color: rgba(0,0,0,.95);
+                background: rgba(0,0,0,.03);            
+            }
+            &.selected {
+                color: rgba(0,0,0,.95);
+                font-weight: 700;
+            }
+        }
+    }
+
+}

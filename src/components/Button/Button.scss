@@ -1,0 +1,43 @@
+@import 'assets/scss/variables.scss';
+
+.btn-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.25rem !important;
+    outline: none;
+    transition: .3s all !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem !important;
+    &:disabled {
+        opacity: .35 !important;
+        background-color: $gray !important;
+        border: 2px solid transparent !important;
+        color: white !important;
+    }
+    &.btn-error {
+        border-color: $red !important;
+        color: $red !important;
+        background-color: transparent !important;
+    }
+    &.lg {
+        padding: 18px 24px !important;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+    }
+    &.btn-icon {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+    @include md {
+        svg{margin:0}
+        span { display: none}
+    }
+  }

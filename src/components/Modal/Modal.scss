@@ -1,0 +1,53 @@
+@import 'assets/scss/variables.scss';
+
+.modal {
+    background: rgba(0,0,0,.76);
+    .modal-dialog {
+        max-width: 630px;
+        @include sm {max-width: 500px;}
+        .modal-content {
+            .modal-header {
+                border: none;
+                .close {
+                    padding: 0.5rem 1rem;
+                    color: $gray-dark;
+                    //margin: -1rem -1rem -1rem -1rem;
+                    span { font-weight: 300; }
+                }
+            }
+            .modal-body {
+                padding: 1rem 3rem 3rem;
+
+                img {
+                    max-height: 93px;
+                    width: auto;
+                    margin: 0 auto;
+                    display: flex;
+                }
+                h4 {
+                    font-size: 26px;
+                    padding-bottom: 0.5rem !important;
+                }
+                p { 
+                    text-align: left;
+                    font-weight: lighter;
+                    font-size: 20px;
+                    line-height: 34px;
+                    letter-spacing: .03rem;
+                    padding: 0 10%;
+                    margin: 0;
+                }
+            }
+            .modal-footer {
+                background: #F0F3F4;
+                justify-content: center;
+                padding: 1.5rem;
+                font-weight: lighter;
+                color: $gray;
+                font-size: 18px;
+                
+                a { color: black; }
+            }
+        }
+    }
+}

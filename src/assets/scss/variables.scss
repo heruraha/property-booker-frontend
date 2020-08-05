@@ -1,0 +1,65 @@
+@import url("https://use.typekit.net/mqz7lyh.css");
+
+//Variables
+$body-bg: #FFF;
+$border-radius-base: 4px;
+$border-radius-lg: 4px;
+$btn-border-radius-base: $border-radius-base;
+
+$input-color-placeholder: #AFAFAF;
+$blue: #4099FE;
+$yellow: #FFC961;
+$red: darkred;
+$green: #416F37;
+$greenlight: lighten($green, 65%);
+
+$gray-border: #E0E0E0;
+$gray-light: #F0F0F0;
+$gray: #A7A7A7;
+$gray-disabled: #CDCDD2;
+$gray-dark: #333333;
+
+$brand-primary: $green;
+
+$box-shadow: 0px 3px 10px rgba(167,167,167,.29);
+$header-height: 78px;
+
+$font: gill-sans-nova, sans-serif;
+$trans: .3s all;
+
+//Responsive Utilities
+$screen-sm-min: 576px; // Small tablets and large smartphones
+$screen-md-min: 768px; // Small tablets
+$screen-lg-min: 992px; // Tablets / small desktops
+$screen-xl-min: 1200px; // Large desktops
+
+//Media Query Mixins
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}

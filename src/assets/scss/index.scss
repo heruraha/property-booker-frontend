@@ -1,0 +1,253 @@
+@import 'variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+
+//Global Styles
+body {
+  background: $body-bg;
+  color: $gray-dark;
+  overflow-x: hidden;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4 {
+  font-weight: 600;
+  letter-spacing: 0.016em;
+  small {
+    color: $gray;
+    letter-spacing: 0;
+    display: flex;
+    font-size: 1.2rem;
+    margin-top: .25rem;
+    align-items: center;;
+  }
+}
+
+h1, .h1 { font-size: 3rem; letter-spacing: 0.016em;}
+
+.my-6 {margin-top: 5rem; margin-bottom: 5rem}
+.mx-6 {margin-left: 5rem; margin-right: 5rem}
+.mt-6 {margin-top: 5rem}
+.mb-6 {margin-bottom: 5rem}
+
+.m-header {
+  margin-top: $header-height;
+}
+
+.black {color: black} 
+.yellow {color: $yellow} 
+.red {color: $red}  
+.blue {color: $blue} 
+.green {color: $green}
+.white {color: white}
+
+.btn-clear {
+  background: transparent;
+  border: none;
+  transition: .3s all;
+}
+.form-control {
+  border-radius: 0;
+  border-width: 1.5px;
+  color: $gray;
+  letter-spacing: 1px;
+  padding: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
+  &:focus {
+    box-shadow: none;
+    border-color: $green;
+  }
+}
+
+.full-width { width: 100%; }
+
+select.form-control {height: 49px;}
+
+.semibold {font-weight: 600;}
+.bold {font-weight: 700;}
+
+.font-sm {font-size: 0.875rem;}
+
+::placeholder {
+  color: $input-color-placeholder !important;
+}
+
+.bg-primary {background: rgba($brand-primary, .72) !important; color: white}
+
+*:focus {
+  outline: none !important;
+}
+
+.app-container > main {
+  width: 100%;
+  height: 100%;
+}
+
+.loading-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.full-center {
+  height: calc(100vh - #{$header-height});
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nb {
+  border: none !important;
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.opacity-0 { opacity: 0 !important}
+
+.pointer { cursor: pointer; }
+.cursor-grab {cursor: grab;}
+
+
+.btn {
+  border-width: 2px;
+  &.btn-primary {
+    background: $green;
+    border-color: $green;
+    &:hover {
+      background-color: darken($green, 10%);
+      color: white;
+    }
+  }
+  &.btn-outline-primary {
+    border-color: $green !important;
+    color: $green;
+    &:hover {
+      background-color: $green;
+      color: white;
+    }
+  }
+}
+
+
+.btn-link {
+  color: $brand-primary;
+  font-weight: 600;
+  transition: .3s all;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $gray-dark;
+  }
+}
+
+
+
+
+.row-header {
+  .row {padding: 0}
+  .row > div {
+    text-align: left;
+    small {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+  }
+}
+
+
+.btn-row {
+  width: 100%;
+  background: transparent;
+  border: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s all;
+  border-radius: $border-radius-base;
+  font-weight: 200;
+  font-size: 22px;
+  letter-spacing: .03rem;
+  cursor: pointer;
+  // border-top: 1px solid $gray-border;
+  padding: 1rem 0;
+
+  &:hover {
+    background: #F7F7F7;
+  }
+
+  &.active {
+    .check-container { opacity: 1;}
+  }
+  .type {
+    max-width: 40px;
+    height: auto;
+  }
+  .status-btn {
+    border-radius: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .75rem;
+    padding-left: 0;
+    padding-right: 0;
+    &:hover {
+      background: transparent;
+      color: $blue;
+    }
+  }
+
+}
+
+
+
+.profile-img-blank {
+  border: 1px solid $gray-border;
+  background: $gray-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  height: 220px;
+  svg { width: 93px; height: auto; stroke: $gray;}
+}
+
+.truncate-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-height: calc(1.4rem * 3);
+}
+
+.tab-nav {
+  box-shadow: 0px 1px rgba(0,0,0,.1);
+  .nav-item {
+    margin-right: 1rem;
+    .nav-link {
+      text-align: left;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+      padding-left: 0;
+      padding-right: 2rem;
+      padding-bottom: 1rem;
+      border-radius: 0;
+      color: $gray;
+      &.active {
+        background-color: transparent;
+        color: $green;
+        border-bottom: 3px solid $green;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

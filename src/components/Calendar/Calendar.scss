@@ -1,0 +1,97 @@
+@import 'assets/scss/variables.scss';
+
+.month-toggle {
+    position: absolute;
+    top: 13px;
+    background: transparent;
+    border: none;
+    transition: .3s all;
+    svg {
+        stroke: $gray;
+    }
+    &:focus {
+      outline: none !important;
+    }
+    &:hover {
+      opacity: .75;
+      svg { stroke: $green; }
+    }
+    &.back {
+      left: 1.25rem;
+    }
+    &.forward {
+      right: 1.25rem;
+    }
+  }
+.month-wrap {
+    width: 100%;
+    .month-label {
+        text-align: center;
+        margin: 0;
+        background: transparent;
+        
+
+        label {
+            //font-weight: 700;
+            //font-size: 26px;
+            //text-transform: uppercase;
+            padding: 1rem;
+            color: $green;
+            margin: 0;
+        }
+    }
+    .weekdays {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-content: center;
+        width: 90%;
+        margin: 1rem auto;
+
+        .day-label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+    .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-content: center;
+        justify-items: center;
+        //width: 90%;
+        margin: 1rem auto 3rem;
+
+        button {
+            //color: black;
+            font-size: 16px;
+            background: transparent;
+            border: none;
+            width: 100%;
+            //padding: 15px;
+            &.selected {
+                background: $green;
+                color: white;
+            }
+            span{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                transition: .3s all;
+                padding: 6px 0;
+
+            }
+
+            &:hover {
+                span {
+                    background: $green;
+                    color:white;
+                }
+            }
+
+            &:disabled {
+                color: $gray-disabled;
+            }
+        }
+    }
+}
